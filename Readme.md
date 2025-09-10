@@ -15,4 +15,13 @@
 - új verzió megszületése( commit):
     > git commit -m "First commit"
 - ellenőrzés:
-    > git add .
+    > git status
+
+## Távoli repo létrehozása, összekapcsolása
+- GitHub új repo létrehozása
+- Összekapcsolás: 
+    > git remote add origin https://token@github.com/CrashizVok/Suli.git
+- első push
+    >git push -u origin master
+- további push
+    >git push
