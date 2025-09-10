@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: aliceblue;
+        }
+        .container{
+            display: flex;
+            width: 300px;
+            height: 100px;
+            gap: 20px;
+            justify-content: center;  
+            align-items: center;
+            background-color: aquamarine; 
+        }
+        button{
+            font-size: 2rem;
+        }
+        .nr{
+            border: 4px salmon solid;
+            padding: 20px;
+            border-radius: 20%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <button class="dec" onclick="change(-1)">-</button>
+            <div class="nr">0</div>
+            <button class="inc" onclick="change(+1)">+</button>
+        </div>
+    </div>
+    <script>
+        let value = 0
+        const change=(step)=>{
+            value+=step;
+            document.querySelector(".nr").innerHTML = value;
+            document.querySelector(".inc").disabled=(value>=5)
+            document.querySelector(".dec").disabled=(value<=-5)
+        }
+    </script>
+</body>
+</html>
